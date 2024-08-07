@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Rental in Bhutan</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>House Rental in Bhutan</h1>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#houses">Houses</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav> 
+    </header>
+    <section id="home" class="hero">
+        <h2>Find Your Dream House</h2>
+    <p>Browse through our extensive list of rental properties and find the perfect place to call home.</p>
+        <a href="#houses" class="btn">Explore Houses</a>
+    </section>
+    <section id="about" class="about">
+        <h2>About Us</h2>
+        <p>We provide a user-friendly platform for finding rental houses in Bhutan. Our goal is to make the rental search process easy and efficient for everyone.</p>
+    </section>
+    <section id="houses" class="houses">
+        <h2>Available Houses</h2>
+        <div class="house-list">
+            <!-- house card -->
+            <div class="house-card" onclick="goToDetails('1')">
+                <img src="/image/rent1.jpg" alt="House Image">
+                <div class="house-info">
+                    <p>Location: Thimphu, Babesa</p>
+                    <p>Price: Nu.500/month</p>
+                    <p>3 🛏️ 2 🛀</p>
+                    <p>Rating: ⭐⭐⭐⭐</p>
+                </div>
+            </div>
+            <div class="house-card" onclick="goToDetails('1')">
+                <img src="/image/rent1.jpg" alt="House Image">
+                <div class="house-info">
+                    <p>Location: Thimphu, Olokha</p>
+                    <p>Price: Nu.500/month</p>
+                    <p>3 🛏️ 2 🛀</p>
+                    <p>Rating: ⭐⭐⭐⭐</p>
+                </div>
+            </div>
+            <div class="house-card" onclick="goToDetails('1')">
+                <img src="/image/rent1.jpg" alt="House Image">
+                <div class="house-info">
+                    <p>Location: Thimphu, Babyna</p>
+                    <p>Price: Nu.500/month</p>
+                    <p>3 🛏️ 2 🛀</p>
+                    <p>Rating: ⭐⭐⭐⭐</p>
+                </div>
+            </div>
+            <div class="house-card" onclick="goToDetails('1')">
+                <img src="/image/rent1.jpg" alt="House Image">
+                <div class="house-info">
+                    <p>Location: Thimphu, Changzamto</p>
+                    <p>Price: Nu.500/month</p>
+                    <p>3 🛏️ 2 🛀</p>
+                    <p>Rating: ⭐⭐⭐⭐</p>
+                </div>
+            </div>
+            <div class="house-card" onclick="goToDetails('1')">
+                <img src="/image/rent1.jpg" alt="House Image">
+                <div class="house-info">
+                    <p>Location: Thimphu, Taba</p>
+                    <p>Price: Nu.500/month</p>
+                    <p>3 🛏️ 2 🛀</p>
+                    <p>Rating: ⭐⭐⭐⭐</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+    </section>
+    <footer>
+        <p>&copy; 2024 House Rental in Bhutan. All rights reserved.</p>
+    </footer>
+    <script src="script.js">
+        console.log("Hello World")
+    </script>
+</body>
+</html>

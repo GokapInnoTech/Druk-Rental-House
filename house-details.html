@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Details</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>House Details</h1>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#houses">Houses</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="house-gallery" id="house-gallery">
+            
+
+           <div class="image-holder"> <img src="/image/rent1.jpg" alt="House Image"></div>
+            
+           
+        
+        </div>
+        <div class="house-details" id="house-details">
+            <h2>Description</h2>
+            <p>This is a beautiful house located in Thimphu...</p>
+            <h2>Amenities and Features</h2>
+            <ul>
+                <li>Appliances</li>
+                <li>Furniture</li>
+                <li>Parking</li>
+                <li>Outdoor spaces</li>
+            </ul>
+            <h2>Bedrooms and Bathrooms</h2>
+            <p>3 Bedrooms, 2 Bathrooms</p>
+            <h2>Pricing and Availability</h2>
+            <p>Nu.500/month</p>
+            <h2>Contact Information</h2>
+            <p>Email: example@example.com</p>
+            <p>Phone: +1234567890</p>
+        </div>
+    </main>
+    <script>
+        // Function to get URL parameters
+        function getURLParams() {
+            const params = new URLSearchParams(window.location.search);
+            return {
+                img1: params.get('img1'),
+                img2:params.get('img2'),
+                img2:params,
+                id: params.get('id'),
+                name: params.get('name'),
+                price: params.get('price'),
+                location: params.get('location')
+            };
+        }
+
+        // Display the house details
+        function displayHouseDetails() {
+            const houseDetails = getURLParams();
+            const detailsDiv = document.createElement('div');
+            const housegallery=document.getElementById('house-gallery')
+            const imageholder=document.createElement('div')
+            imageholder.innerHTML=` <img src="${houseDetails.img1}" />
+            <div class="image-holder"> <img src="${houseDetails.img2}" /></div>`
+            housegallery.append(imageholder)
+         console.log(houseDetails)
+            detailsDiv.innerHTML = `
+               
+                <p><strong>House ID:</strong> ${houseDetails.id}</p>
+                <p><strong>House Name:</strong> ${houseDetails.name}</p>
+                <p><strong>House Price:</strong> ${houseDetails.price}</p>
+                <p><strong>House Location:</strong> ${houseDetails.location}</p>
+            `;
+            const houseContainer=document.getElementById("house-details")
+            houseContainer.append(detailsDiv)
+        }
+      
+
+        // Call the function to display details on page load
+         displayHouseDetails();
+    </script>
+    <footer>
+        <p>&copy; 2024 House Rental in Bhutan. All rights reserved.</p>
+    </footer>
+</body>
+</html>
